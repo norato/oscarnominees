@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule
+    NgbModule.forRoot()
   ],
   providers: [ CategoriesDataService ],
   bootstrap: [AppComponent]
