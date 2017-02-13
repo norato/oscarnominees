@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
+import { CategoriesDataService } from './categories/categories-data.service';
+
 
 const appRoutes: Routes = [
   {
@@ -29,7 +31,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ CategoriesDataService ],
   bootstrap: [AppComponent]
 })
 

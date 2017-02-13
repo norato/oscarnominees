@@ -1,3 +1,6 @@
-<p>
-  categories works!
-</p>
+<ul>
+  <li *ngFor="let category of categories">
+    <p>{{ category.name }}</p>
+    <p>{{ category.originalName }}</p>
+  </li>
+</ul>
