@@ -9,22 +9,21 @@ import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesDataService } from './categories/categories-data.service';
+import { MoviesComponent } from './movies/movies.component';
 
 
 const appRoutes: Routes = [
-  {
-    path: '', component: HomeComponent
-  },
-  {
-    path: 'categories', component: CategoriesComponent
-  }
+  { path: '', component: HomeComponent },
+  { path: 'categories', component: CategoriesComponent },
+  { path: 'movies', component: MoviesComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriesComponent,
-    HomeComponent
+    HomeComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
