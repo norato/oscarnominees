@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CategoriesDataService {
 
-  private endpoint = 'app/categories.json'
+  private endpoint = 'app/categories/categories.json'
 
   constructor(private http: Http) { }
 
