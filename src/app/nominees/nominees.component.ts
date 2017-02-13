@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-nominees',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NomineesComponent implements OnInit {
 
-  constructor() { }
+  private categoryId;
+  private category;
+
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.params.forEach(
+      (params: Params) => this.categoryId = params['id']
+    )
   }
 
 }
