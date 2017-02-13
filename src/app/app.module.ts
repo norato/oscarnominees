@@ -6,10 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
+
+import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesDataService } from './categories/categories-data.service';
+
 import { MoviesComponent } from './movies/movies.component';
+import { MoviesDataService } from './movies/movies-data.service';
 
 
 const appRoutes: Routes = [
@@ -32,7 +35,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot()
   ],
-  providers: [ CategoriesDataService ],
+  providers: [
+    CategoriesDataService,
+    MoviesDataService
+  ],
   bootstrap: [AppComponent]
 })
 
