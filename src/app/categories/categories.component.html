@@ -1,10 +1,7 @@
-<ngb-alert [type]="'success'" [dismissible]="false">
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</ngb-alert>
-
-<ul>
-  <li *ngFor="let category of categories">
-    <p>{{ category.name }}</p>
-    <p>{{ category.originalName }}</p>
-  </li>
-</ul>
+<div class="card" *ngFor="let category of categories">
+  <div class="card-block">
+    <h4 class="card-title">{{ category.name }}</h4>
+    <p class="card-text">{{ category.originalName }}</p>
+    <a [routerLink]="['/categories', category.id]" class="btn btn-primary">Veja os Indicados</a>
+  </div>
+</div>

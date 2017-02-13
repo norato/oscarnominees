@@ -13,11 +13,13 @@ import { CategoriesDataService } from './categories/categories-data.service';
 
 import { MoviesComponent } from './movies/movies.component';
 import { MoviesDataService } from './movies/movies-data.service';
+import { NomineesComponent } from './nominees/nominees.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'categories', component: CategoriesComponent },
+  { path: 'categories/:id', component: NomineesComponent },
   { path: 'movies', component: MoviesComponent }
 ]
 
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     AppComponent,
     CategoriesComponent,
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
+    NomineesComponent
   ],
   imports: [
     BrowserModule,
